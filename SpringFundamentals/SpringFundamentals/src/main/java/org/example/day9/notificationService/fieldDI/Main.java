@@ -1,0 +1,16 @@
+package org.example.day9.notificationService.fieldDI;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Main {
+    public static void main(String[] args) {
+        ApplicationContext context = new
+                AnnotationConfigApplicationContext(AppConfig.class);
+
+        Employee emp = context.getBean(Employee.class);
+        String res =  emp.displayAddress();
+        System.out.println(res);
+
+    }
+}
